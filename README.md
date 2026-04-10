@@ -1,50 +1,36 @@
-# FoodDarzee AI — "Eat Smart Today, Avoid Disease Tomorrow"
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-An AI-powered preventive healthcare assistant that tracks food habits, recommends personalized meals based on health goals, predicts future health risks, and suggests improvements via behavioral tracking.
+## Getting Started
 
-## Overview
+First, run the development server:
 
-Unlike standard food delivery or simple calorie-counting apps, FoodDarzee AI operates on the concept of **"Food as Preventive Medicine."** 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-It acts as a proactive health companion:
-- **Analyzes** your daily eating habits and nutritional intake.
-- **Predicts** hidden health risks (obesity, diabetes, heart disease, muscle loss, fatigue).
-- **Recommends** corrective food habits via an AI rules engine *before* disease occurs.
-- **Gamifies** your journey with a daily streak system, health score, and achievements.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Tech Stack
-- **Frontend**: Next.js 14 (App Router), React, Tailwind CSS v4, Framer Motion
-- **Architecture**: State-managed context (Meals, User, Settings) + Browser LocalStorage for persistence.
-- **Backend/Deployment**: Designed to be integrated seamlessly with Firebase (Auth, Firestore, Hosting).
-- **UI/UX**: Custom Glassmorphism, Micro-animations, Golden/Amber Health color palette, Dark/Light mode support.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Key Features
-1. **Multi-Step Onboarding**: Collects age, metrics, dietary preferences, sleep hours, activity level, and existing conditions to calculate BMI, BMR, TDEE, and precise macro targets.
-2. **Smart Dashboard**: Visual representation of daily calorie budget, macronutrient splits, hydration, active streak, and overall health score.
-3. **AI Recommendation Engine**: Rule-based intelligence proposing personalized meals contextually (e.g., handles skipped breakfast, protein deficiency, sugar spikes, or fitness goals conditionally).
-4. **Health Risk Prediction Engine**: Scores the user's risks out of 100 on Obesity, Diabetes, Heart Disease, Muscle Loss, and Fatigue. Provides actionable insights based on these markers.
-5. **Habit Intelligence**: "Week In Review" showing consistency in tracking, junk food control, late-night eating, hydration, and more.
-6. **AI Chat Assistant**: A context-aware chatbot helping users with goals, meal ideas, sleep habits, and streak encouragement.
-7. **Gamification Engine**: Progress levels, 20+ unlockable achievement badges (e.g., "Night Owl Reformed", "Protein Champion"), and total pointing system.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Setup Instructions
+## Learn More
 
-1. Clone or download the repository.
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-## Design Aesthetics
-The platform is designed to invoke the warmth and energy of health (yellow/amber + green), creating a dynamic and visually premium interface. Interactions incorporate smooth hover-states, Framer Motion page transitions, responsive modals, tabular numeric font-displays, and detailed progress charts.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
-*Built for the Advanced Agentic Coding Hackathon / Showcase.*
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

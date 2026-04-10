@@ -1,8 +1,0 @@
-app/node_modules
-app/.next
-Dockerfile
-.dockerignore
-.git
-.gitignore
-app/npm-debug.log
-app/.env*
