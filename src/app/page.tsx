@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useApp } from '@/context/AppContext';
 
 const features = [
@@ -53,11 +54,10 @@ export default function LandingPage() {
         padding: '0 24px',
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 28 }}>🥗</span>
-            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 22, color: 'var(--foreground)' }}>
-              Food<span style={{ color: '#f59e0b' }}>Darzee</span> AI
-            </span>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Link href="/" style={{ textDecoration: 'none' }}>
+              <Image src="/logo.png" alt="FoodDarzee AI" width={180} height={45} style={{ objectFit: 'contain' }} priority />
+            </Link>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
             <Link href={isAuthenticated ? '/dashboard' : '/auth'} style={{
@@ -265,11 +265,8 @@ export default function LandingPage() {
         borderTop: '1px solid var(--border-color)',
         textAlign: 'center',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginBottom: 12 }}>
-          <span style={{ fontSize: 20 }}>🥗</span>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 16, color: 'var(--foreground)' }}>
-            Food<span style={{ color: '#f59e0b' }}>Darzee</span> AI
-          </span>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+          <Image src="/logo.png" alt="FoodDarzee AI" width={160} height={40} style={{ objectFit: 'contain' }} />
         </div>
         <p style={{ fontSize: 13, color: 'var(--muted)' }}>
           © 2024 FoodDarzee AI. Built with ❤️ for preventive healthcare.

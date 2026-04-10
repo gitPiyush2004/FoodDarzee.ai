@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useApp } from '@/context/AppContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AuthPage() {
   const { login, isAuthenticated, user } = useApp();
@@ -86,12 +87,11 @@ export default function AuthPage() {
 
       <div className="animate-fade-in" style={{ width: '100%', maxWidth: 440, position: 'relative', zIndex: 1 }}>
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, marginBottom: 36 }}>
-          <span style={{ fontSize: 32 }}>🥗</span>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 24, color: 'var(--foreground)' }}>
-            Food<span style={{ color: '#f59e0b' }}>Darzee</span> AI
-          </span>
-        </Link>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 36 }}>
+          <Link href="/" style={{ textDecoration: 'none' }}>
+            <Image src="/logo.png" alt="FoodDarzee" width={280} height={70} style={{ objectFit: 'contain' }} priority />
+          </Link>
+        </div>
 
         {/* Card */}
         <div className="card" style={{ padding: '36px 32px' }}>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useApp } from '@/context/AppContext';
 
@@ -35,13 +36,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       }}>
         {/* Logo */}
         <div style={{
-          padding: '20px 20px 16px', borderBottom: '1px solid var(--border-color)',
-          display: 'flex', alignItems: 'center', gap: 10,
+          padding: '24px 20px 16px', borderBottom: '1px solid var(--border-color)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center'
         }}>
-          <span style={{ fontSize: 24 }}>🥗</span>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 17, color: 'var(--foreground)' }}>
-            Food<span style={{ color: '#f59e0b' }}>Darzee</span>
-          </span>
+          <Link href="/">
+            <Image src="/logo.png" alt="FoodDarzee" width={180} height={45} style={{ objectFit: 'contain' }} priority />
+          </Link>
         </div>
 
         {/* Nav Items */}
@@ -146,9 +146,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           }}>
             ☰
           </button>
-          <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 16, color: 'var(--foreground)' }}>
-            Food<span style={{ color: '#f59e0b' }}>Darzee</span>
-          </span>
+          <Link href="/" style={{ display: 'flex' }}>
+            <Image src="/logo.png" alt="FoodDarzee" width={140} height={35} style={{ objectFit: 'contain' }} priority />
+          </Link>
           <div style={{ width: 22 }} />
         </div>
 
