@@ -1,7 +1,6 @@
 # 🥗 FoodDarzee AI 
 *Eat Smart Today, Avoid Disease Tomorrow*
 
-### 🏆 Hack2Skill Hackathon Submission
 FoodDarzee AI is a full-stack, AI-powered preventive healthcare web application. Instead of being a standard food delivery platform, FoodDarzee AI acts as a **smart health assistant**. It tracks dietary habits, provides personalized contextual meal recommendations, predicts future health risks (like obesity, diabetes, and fatigue) using a multi-factor logic engine, and incorporates gamification to encourage long-term healthy habits.
 
 The core philosophy of this project is **"Food as Preventive Medicine"**.
