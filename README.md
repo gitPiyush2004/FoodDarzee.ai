@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥗 FoodDarzee AI 
+*Eat Smart Today, Avoid Disease Tomorrow*
 
-## Getting Started
+### 🏆 Hack2Skill Hackathon Submission
+FoodDarzee AI is a full-stack, AI-powered preventive healthcare web application. Instead of being a standard food delivery platform, FoodDarzee AI acts as a **smart health assistant**. It tracks dietary habits, provides personalized contextual meal recommendations, predicts future health risks (like obesity, diabetes, and fatigue) using a multi-factor logic engine, and incorporates gamification to encourage long-term healthy habits.
 
-First, run the development server:
+The core philosophy of this project is **"Food as Preventive Medicine"**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   **Intelligent Onboarding**: Collects biometrics (automatically calculating BMI & TDEE), goals, and underlying health conditions to tailor the entire experience.
+*   **Comprehensive Health Dashboard**: A centralized hub featuring calorie ring charts, macro progress bars, hydration tracking, and a dynamic health risk preview.
+*   **AI Recommendations Engine**: Analyzes your tracked foods and identifies nutritional gaps. If you're missing protein or fiber for the day, the AI contextually suggests meals to fix it.
+*   **Health Risk Prediction Prediction**: Real-time evaluation engines calculate risk scores (0-100) for Diabetes, Heart Disease, Muscle Loss, and Fatigue based on user metrics and daily inputs.
+*   **Habit Radar & Insights**: Weekly reports analyzing eating timestamps (detecting late-night snacking), sugar loads, consistency, and hydration.
+*   **Gamification**: Long-term adherence is maintained via daily streak logic, points systems, and 20+ unlockable achievement badges.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack & Architecture
 
-To learn more about Next.js, take a look at the following resources:
+*   **Frontend**: Next.js 14/15 (App Router), React 19
+*   **Styling**: Tailwind CSS v4, custom glassmorphism components
+*   **Backend & DB**: Firebase Authentication & Google Cloud Firestore (GCP)
+*   **Deployment**: Dockerized and hosted continuously via Google Cloud Run
+*   **Logic & Computation**: TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Engines Built from Scratch:
+1.  **Calculations Library**: BMI, BMR, TDEE, macro bounds.
+2.  **AI Engine**: Nutriton gap analysis rule sets.
+3.  **Risk Engine**: 5-category health risk calculations.
+4.  **Habit Engine**: Time-series analysis of meal log arrays.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 How to Run Locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/gitPiyush2004/FoodDarzee.ai.git
+   cd FoodDarzee.ai
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**
+   Ensure you have a `.env.local` file with your specific Google Firebase keys to connect to the database.
+
+4. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+*Designed and engineered with ❤️ for the Hack2Skill Hackathon.*
