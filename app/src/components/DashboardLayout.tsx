@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--background)' }}>
       {/* Desktop Sidebar */}
-      <aside style={{
+      <aside aria-label="Main Sidebar" style={{
         width: 240, flexShrink: 0, background: 'var(--surface)',
         borderRight: '1px solid var(--border-color)',
         display: 'flex', flexDirection: 'column',
@@ -79,7 +79,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           )}
 
           {/* Dark mode toggle */}
-          <button onClick={toggleDarkMode} style={{
+          <button onClick={toggleDarkMode} aria-pressed={darkMode} aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"} style={{
             width: '100%', display: 'flex', alignItems: 'center', gap: 10,
             padding: '10px 14px', borderRadius: 10, border: 'none',
             background: 'transparent', color: 'var(--foreground)',
@@ -127,7 +127,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
       {/* Mobile overlay */}
       {sidebarOpen && (
-        <div onClick={() => setSidebarOpen(false)} style={{
+        <div onClick={() => setSidebarOpen(false)} role="button" aria-label="Close Sidebar" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && setSidebarOpen(false)} style={{
           position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)',
           zIndex: 35,
         }} />
@@ -141,7 +141,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           padding: '12px 20px', borderBottom: '1px solid var(--border-color)',
           background: 'var(--surface)',
         }}>
-          <button onClick={() => setSidebarOpen(true)} style={{
+          <button onClick={() => setSidebarOpen(true)} aria-label="Open Menu" aria-expanded={sidebarOpen} style={{
             border: 'none', background: 'none', fontSize: 22, cursor: 'pointer', color: 'var(--foreground)',
           }}>
             ☰
@@ -169,7 +169,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           {navItems.map(item => {
             const isActive = pathname === item.href;
             return (
-              <Link key={item.href} href={item.href} style={{
+              <Link key={item.href} href={item.href} aria-label={`Go to ${item.label}`} style={{
                 display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2,
                 textDecoration: 'none', fontSize: 10, fontWeight: isActive ? 700 : 500,
                 color: isActive ? '#d97706' : 'var(--muted)',
