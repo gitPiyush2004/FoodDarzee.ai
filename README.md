@@ -29,8 +29,8 @@ The core philosophy of this project is **"Food as Preventive Medicine"**.
 ### Engines Built from Scratch:
 1.  **Calculations Library**: BMI, BMR, TDEE, macro bounds.
 2.  **AI Engine**: Nutriton gap analysis rule sets.
-3.  **Risk Engine**: 5-category health risk calculations.
-4.  **Habit Engine**: Time-series analysis of meal log arrays.
+3.  **Risk Engine**: 5-category health risk calculations
+4.  **Habit Engine**: Time-series analysis of meal log arrays
 
 ---
 
