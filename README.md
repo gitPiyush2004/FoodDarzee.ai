@@ -7,7 +7,7 @@ The core philosophy of this project is **"Food as Preventive Medicine"**.
 
 ---
 
-## 🌟 Key Features
+### 🌟 Key Features
 
 *   **Intelligent Onboarding**: Collects biometrics (automatically calculating BMI & TDEE), goals, and underlying health conditions to tailor the entire experience.
 *   **Comprehensive Health Dashboard**: A centralized hub featuring calorie ring charts, macro progress bars, hydration tracking, and a dynamic health risk preview.
@@ -18,7 +18,7 @@ The core philosophy of this project is **"Food as Preventive Medicine"**.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+### 🛠️ Tech Stack & Architecture
 
 *   **Frontend**: Next.js 14/15 (App Router), React 19
 *   **Styling**: Tailwind CSS v4, custom glassmorphism components
